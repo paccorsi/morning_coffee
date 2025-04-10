@@ -1,0 +1,52 @@
+[project]
+name = "morning_coffee"
+description = "A clean and professional Plotly template."
+version = "1.0.0"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "paccorsi" },
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "plotly>=4.0.0",
+]
+
+[project.urls]
+"Source" = "https://github.com/paccorsi/morning_coffee"
+
+[project.optional-dependencies]
+dev = [
+    "jupyterlab>=4.0.0,<5.0.0",
+    "kaleido",
+    "nbconvert>=7.2.1,<8.0.0",
+    "pandas>=2.0.0,<3.0.0",
+    "plotly[express]>=4.0.0",
+    "ruff>=0.11.0,<0.12",
+]
+
+[tool.setuptools]
+packages = ["morning_coffee"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # isort
+    "I",
+]
